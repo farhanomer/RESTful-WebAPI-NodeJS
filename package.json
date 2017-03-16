@@ -1,0 +1,24 @@
+{
+  "name": "restfulapi",
+  "version": "1.0.0",
+  "description": "Node JS APi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo\"Error:no test specified\"&& exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farhanomer/RESTful-WebAPI-NodeJS.git"
+  },
+  "author": "Farhan Omer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farhanomer/RESTful-WebAPI-NodeJS/issues"
+  },
+  "homepage": "https://github.com/farhanomer/RESTful-WebAPI-NodeJS#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1"
+  }
+}
