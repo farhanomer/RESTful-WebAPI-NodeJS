@@ -23,7 +23,7 @@ entityRouter.route('/Entities').get(function(req,res){
 
 });
 
-app.use('/api',router);
+app.use('/api',entityRouter);
 app.get('/',function(req,res){
     res.send('Welcome to Restful API using gulp');
 });
