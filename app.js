@@ -10,7 +10,14 @@ var  app=express();
 var port= process.env.PORT || 3000;
 
 var entityRouter= express.Router();
-entity.route('/Entity').get(function(req,res){
+entityRouter.route('/Entities').get(function(req,res){
+     Entity.find(function(err,entities){
+         if(err)
+             console.log(err);
+         else
+             res.json(entities);
+
+     });
      var responseJSON={hello:"This is my api"};
      res.json(responseJSON);
 
