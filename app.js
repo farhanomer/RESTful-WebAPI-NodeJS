@@ -18,7 +18,7 @@ entityRouter.route('/Entities').get(function(req,res){
     Entity.find(function(err,entities){
         console.log(entities);
          if(err)
-             console.log(err);
+             res.status(500).send(err);
          else
              //entities
              res.json(entities);
