@@ -21,6 +21,6 @@
     "gulp": "^3.9.1",
     "gulp-nodemon": "^2.2.1",
     "mongodb": "^2.2.25",
-    "mongoose": "^4.9.0"
+    "mongoose": "^4.9.1"
   }
 }

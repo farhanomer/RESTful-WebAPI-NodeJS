@@ -5,17 +5,14 @@
 
 var express =require('express'),
     mongoose=require('mongoose');
-var db=mongoose.connect('mongodb://localhost/entityAPI');
+var db=mongoose.connect('');
+var app=express();
+var port= process.env.PORT || 3000;
 var Entity=require('./models/entityModel');
 
-/**
- *
- */
-//var Connection = require('dbConfig');
 
-var  app=express();
-var port= process.env.PORT || 3000;
-//Mangoose Connection
+
+
 var entityRouter= express.Router();
 entityRouter.route('/Entities').get(function(req,res){
      Entity.find(function(err,entities){
@@ -28,11 +25,6 @@ entityRouter.route('/Entities').get(function(req,res){
 
 
 });
-
-
-
-
-
 
 app.use('/api',entityRouter);
 app.get('/',function(req,res){
