@@ -5,20 +5,22 @@
 
 var express =require('express'),
     mongoose=require('mongoose');
-var db=mongoose.connect('mongodb://localhost/entityAPI');
-var app=express();
-var port= process.env.PORT || 3000;
+var db=mongoose.connect('mongodb://127.0.0.1:27017/entityDB');
+
 var Entity=require('./models/entityModel');
 
-
+var app=express();
+var port= process.env.PORT || 3000;
 
 
 var entityRouter= express.Router();
 entityRouter.route('/Entities').get(function(req,res){
-     Entity.find(function(err,entities){
+    Entity.find(function(err,entities){
+        console.log(entities);
          if(err)
              console.log(err);
          else
+             //entities
              res.json(entities);
 
      });
