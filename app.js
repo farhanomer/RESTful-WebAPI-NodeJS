@@ -5,7 +5,7 @@
 
 var express =require('express'),
     mongoose=require('mongoose');
-var db=mongoose.connect('');
+var db=mongoose.connect('mongodb://localhost/entityAPI');
 var app=express();
 var port= process.env.PORT || 3000;
 var Entity=require('./models/entityModel');
