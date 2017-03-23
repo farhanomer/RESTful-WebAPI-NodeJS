@@ -11,8 +11,6 @@ var Entity=require('./models/entityModel');
 
 var app=express();
 var port= process.env.PORT || 3000;
-
-
 var entityRouter= express.Router();
 entityRouter.route('/Entities').get(function(req,res){
     Entity.find(function(err,entities){
