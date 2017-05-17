@@ -12,8 +12,18 @@ var express =require('express'),
 var Entity=require('./models/entityModel');
 
 var app=express();
-var port= process.env.PORT || 3000;
-var entityRouter= express.Router();
+var port= process.env.PORT || 8000;
+var orderRouter= express.Router();
+orderRouter.route('/Orders')
+    .get(function(req,res){
+        var responseJSON={hello:"This is my api"};
+        res.json(responseJSON);
+    });
+
+
+app.use('/api',orderRouter);
+
+
 /*entityRouter.route('/Entities').get(function(req,res){
     Entity.find(function(err,entities){
         console.log(entities);
@@ -28,7 +38,7 @@ var entityRouter= express.Router();
 
 });*/
 
-/*app.use('/api',entityRouter);*/
+
 app.get('/',function(req,res){
     res.send('Welcome to Restful API using gulping');
 });
